@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bluebo.xyz</title>
+    <title>Rocket Animation</title>
     <style>
         body {
             margin: 0;
@@ -17,6 +17,11 @@
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="https://raw.githubusercontent.com/blueboxyz/bluebo.xyz/main/beat1.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
         const canvas = document.getElementById("gameCanvas");
         const ctx = canvas.getContext("2d");
@@ -39,10 +44,10 @@
         }
 
         const rocketImage = new Image();
-        rocketImage.src = 'rocket.png';  // Set your rocket image path here.
+        rocketImage.src = "https://raw.githubusercontent.com/blueboxyz/bluebo.xyz/main/rocket.png";
+
         const rocketSpeed = 2.5;
         let rocketAngle = Math.random() * 360;
-
         let angularVelocity = 0.0;
         let turnTimer = 0;
 
